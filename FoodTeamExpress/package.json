@@ -1,0 +1,37 @@
+{
+  "name": "foodteamexpress",
+  "version": "1.0.0",
+  "description": "MERN Food Team Express App",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node food-team-express-back/server",
+    "server": "nodemon food-team-express-back/server",
+    "client": "npm start --prefix food-team-express-front",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node food-team-express-back/seeder",
+    "data:destroy": "node food-team-express-back/seeder -d"
+  },
+  "author": "Equipo 11-FoodTeamExpress",
+  "license": "MIT",
+  "dependencies": {
+    "@auth0/auth0-react": "^1.8.0",
+    "antd": "^4.16.13",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "firebase": "^9.1.2",
+    "google-auth-library": "^7.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.9",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.13"
+  }
+}
